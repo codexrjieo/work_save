@@ -3,7 +3,7 @@ const router = express.Router();
 const Note = require("../models/Note");
 // Home route
 router.get("/", (req, res) => {
-    res.render("home");
+    res.send("Please enter any pageid after/");
 });
 
 // GET Notepad Page
