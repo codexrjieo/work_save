@@ -33,7 +33,7 @@ router.post("/:pageId/passcode", async (req, res) => {
 
     if (note.passcode === "") {
         // Set new passcode
-        if (passcode.length === 4 && /^\d+$/.test(passcode)) {
+        if (passcode.length === 6 && /^\d+$/.test(passcode)) {
             note.passcode = passcode;
             await note.save();
             res.json({ status: "set" });
