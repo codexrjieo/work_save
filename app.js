@@ -2,12 +2,12 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const path = require("path");
-const cors = require("cors");
+
 const bodyParser = require("body-parser");
 const noteRoutes = require("./routes/noteRoutes");
 
 dotenv.config();
-app.use(cors());
+
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
