@@ -6,8 +6,8 @@
 </head>
 <body>
     <div id="passcodeOverlay">
-        <h2 id="promptTitle">Enter 4-digit Passcode</h2>
-        <input type="password" id="passcodeInput" maxlength="4">
+        <h2 id="promptTitle">Enter 6-digit Passcode</h2>
+        <input type="password" id="passcodeInput" maxlength="6">
         <button onclick="submitPasscode()">Submit</button>
         <p id="message"></p>
     </div>
@@ -37,9 +37,9 @@
                     overlay.style.display = "none";
                     textarea.style.display = "block";
                 } else if (data.status === "invalid") {
-                    message.textContent = "Passcode must be 4 digits.";
+                    message.textContent = "Passcode must be 6 digits.";
                 } else {
-                    message.textContent = "Wrong passcode!";
+                    message.textContent = "Wrong passcode. If you don't remember it, try creating a new notepad with a unique Page ID.";
                 }
             });
         }
